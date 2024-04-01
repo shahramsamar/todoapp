@@ -10,5 +10,15 @@ class BasicInformationModel(models.Model):
     address = models.CharField(max_length=255)
     language =models.CharField(max_length=255)
     
+    
+    def __str__(self):
+        return self.id
+    
     class Meta:
+        ordering =['id']
+
+class  SkillModel(models.Model):
+    title = models.CharField(max_length=255)   
+    level = models.PositiveBigIntegerField(default=50)  
+    
         
