@@ -3,7 +3,7 @@ from website.models import BasicInformationModel, SkillModel
 
 # Register your models here.
 class BasicInformationAdmin(admin.ModelAdmin):
-    list_display =['id','age']
+    list_display =['email','age']
 
 class SkillAdmin(admin.ModelAdmin):
     list_display =['title','level']

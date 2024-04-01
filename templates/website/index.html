@@ -69,8 +69,7 @@
 <div class="col-lg-6 col-md-12">
 <div class="card-body">
 <div class="h4 mt-0 title">About</div>
-<p>Hello! I am Anthony Barnett. Web Developer, Graphic Designer and Photographer.</p>
-<p>Creative CV is a HTML resume template for professionals. Built with Bootstrap 4, Now UI Kit and FontAwesome, this modern and responsive design template is perfect to showcase your portfolio, skills and experience. <a href="https://templateflip.com/templates/creative-cv/" target="_blank">Learn More</a></p>
+{{BasicInfo.about}}
 </div>
 </div>
 <div class="col-lg-6 col-md-12">
@@ -78,23 +77,23 @@
 <div class="h4 mt-0 title">Basic Information</div>
 <div class="row">
 <div class="col-sm-4"><strong class="text-uppercase">Age:</strong></div>
-<div class="col-sm-8">24</div>
+<div class="col-sm-8">{{BasicInfo.age}}</div>
 </div>
 <div class="row mt-3">
 <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-<div class="col-sm-8"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c9c6dcc0c7c6d1e8cbc7c5d8c9c6d186cbc7c5">[email&#160;protected]</a></div>
+<div class="col-sm-8"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c9c6dcc0c7c6d1e8cbc7c5d8c9c6d186cbc7c5">{{BasicInfo.email}}</a></div>
 </div>
 <div class="row mt-3">
 <div class="col-sm-4"><strong class="text-uppercase">Phone:</strong></div>
-<div class="col-sm-8">+1718-111-0011</div>
+<div class="col-sm-8">{{BasicInfo.phone_number}}</div>
 </div>
 <div class="row mt-3">
 <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-<div class="col-sm-8">140, City Center, New York, U.S.A</div>
+<div class="col-sm-8">{{BasicInfo.address}}</div>
 </div>
 <div class="row mt-3">
 <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-<div class="col-sm-8">English, German, French</div>
+<div class="col-sm-8">{{BasicInfo.language}}</div>
 </div>
 </div>
 </div>
@@ -108,53 +107,20 @@
 <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 <div class="card-body">
 <div class="row">
+{% for skill in Skills %}
 <div class="col-md-6">
-<div class="progress-container progress-primary"><span class="progress-badge">HTML</span>
+<div class="progress-container progress-primary"><span 
+  class="progress-badge">{{skill.title}}</span>
 <div class="progress">
-<div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div><span class="progress-value">80%</span>
+<div class="progress-bar progress-bar-primary" data-aos="progress-full"
+ data-aos-offset="10" data-aos-duration="2000" role="progressbar" 
+ aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" 
+ style="width: {{skill.level}}%;%"></div><span class="progress-value">{{skill.level}}</span>
 </div>
 </div>
 </div>
-<div class="col-md-6">
-<div class="progress-container progress-primary"><span class="progress-badge">CSS</span>
-<div class="progress">
-<div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value">75%</span>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6">
-<div class="progress-container progress-primary"><span class="progress-badge">JavaScript</span>
-<div class="progress">
-<div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="progress-container progress-primary"><span class="progress-badge">SASS</span>
-<div class="progress">
-<div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div><span class="progress-value">60%</span>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-6">
-<div class="progress-container progress-primary"><span class="progress-badge">Bootstrap</span>
-<div class="progress">
-<div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div><span class="progress-value">75%</span>
-</div>
-</div>
-</div>
-<div class="col-md-6">
-<div class="progress-container progress-primary"><span class="progress-badge">Photoshop</span>
-<div class="progress">
-<div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;"></div><span class="progress-value">70%</span>
-</div>
-</div>
-</div>
-</div>
+{% endfor %}
+ </div>
 </div>
 </div>
 </div>
