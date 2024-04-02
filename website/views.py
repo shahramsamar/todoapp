@@ -1,15 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from website.models import BasicInformationModel, SkillModel
+from website.models import BasicInformationModel, SkillModel, PhotoModel
     
 
 
 def index(request):
     BasicInfo = BasicInformationModel.objects.first()
     Skills = SkillModel.objects.all()
+    gallery = PhotoModel.objects.all()
     context ={
         'BasicInfo':BasicInfo,
-        'Skills': Skills
+        'Skills': Skills,
+        'gallery':gallery,
         }
     return render(request, "website/index.html", context)
 
