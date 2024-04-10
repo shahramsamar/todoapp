@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY',default='django-insecure-q&&o6hq@k+oi*bt(uwumrf
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 
 
