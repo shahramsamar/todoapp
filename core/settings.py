@@ -97,7 +97,7 @@ DATABASES = {
         'NAME': config('PGDB_NAME', default='postgres'),                      
         'USER': config('PGDB_USER', default='postgres'),
         'PASSWORD':config('PGDB_PASSWORD', default='postgres'),
-        'HOST': config('PGDB_HOST', default='db'),
+        'HOST': config('PGDB_HOST', default='databaseme'),
         'PORT': config('PGDB_PORT', default=5432, cast=int),
     }
 }

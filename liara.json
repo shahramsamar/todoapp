@@ -1,0 +1,21 @@
+{
+        "django": {
+          "pythonVersion": "3.11",
+          "collectStatic": false
+   
+        },
+
+    "platform": "django",
+    "app": "app-blog-test",
+
+  "disks": [
+    {
+      "name": "media",
+      "mountTo": "media"
+    },
+    {
+      "name": "staticfiles",
+      "mountTo": "staticfiles"
+    }
+  ]
+}
